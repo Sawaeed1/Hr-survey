@@ -11,7 +11,7 @@ using web.Entity;
 
 namespace web
 {
-    public partial class HumanCapitalOperations : System.Web.UI.Page
+    public partial class HRHumanCapitalOperations : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -107,7 +107,7 @@ namespace web
                         cmd.Parameters.AddWithValue("@ipAddress", ipAddress);
                         cmd.Parameters.AddWithValue("@Lat", latitude);
                         cmd.Parameters.AddWithValue("@Long", longitude);
-                        cmd.Parameters.AddWithValue("@SurveyType", 4);
+                        cmd.Parameters.AddWithValue("@SurveyType", 8);
                         cmd.Parameters.AddWithValue("@tAnswer", dt);
                         cmd.CommandType = CommandType.StoredProcedure;
                         int isRowEffected = cmd.ExecuteNonQuery();
@@ -118,7 +118,7 @@ namespace web
 
                         if (isSaved)
                         {
-                           // ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='Performance_management.aspx';</script>'");
+                            //ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='Performance_management.aspx';</script>'");
                             pnlregister.Visible = false;
                             pnlThankyou.Visible = true;
                         }

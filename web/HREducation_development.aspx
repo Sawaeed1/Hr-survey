@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRHumanCapitalOperations.aspx.cs" EnableEventValidation="false" Inherits="web.HRHumanCapitalOperations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HREducation_development.aspx.cs" EnableEventValidation="false" Inherits="web.HREducation_development" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -151,20 +152,20 @@
 
                                                 <asp:Panel ID="pnlEmployment" runat="server">
                                                     <div class="custom-alert custom-alert-success">
-                                                     عمليات رأس المال البشري 
+                                                        تعليم والتطوير
                                                     </div>
                                                     <div class="custom-alert custom-alert-warning" style="width: 35%; direction: rtl; text-align: right; float: right">
-                                                        جميع الموظفين 
+                                                        جميع الموظفين
                                                     </div>
                                                     <div style="height: 80px"></div>
                                                     <input type="hidden" id="latitude" name="latitude">
                                                     <input type="hidden" id="longitude" name="longitude">
-
+                                                
 
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="img1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label10" Text="ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label10" Text="ما مدى فعالية برامج التدريب في تعزيز مهاراتك ومعرفتك؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -190,7 +191,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label1" Text="ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label1" Text="ما مدى سهولة الوصول إلى فرص التعلم والتطوير داخل الشركة؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -215,7 +216,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image3" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label2" Text="ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label2" Text="ما مدى توافق برامج التعلم والتطوير مع أهداف نموك المهني؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -240,7 +241,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image4" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label3" Text="ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label3" Text="ما مدى رضاك عن تنوع وملاءمة الدورات التدريبية المتاحة؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -263,18 +264,17 @@
 
                                                     </div>
 
-                                                  
 
 
 
-
+                                                   
 
                                                     <div id="errorList" class="error-message"></div>
 
 
                                                     <br />
                                                     <div class="rowzz">
-                                                        <asp:LinkButton ID="lnkSubmit" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit_Click"> تقديم</asp:LinkButton>
+                                                        <asp:LinkButton ID="lnkSubmit2" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit2_Click"> التالي</asp:LinkButton>
                                                     </div>
                                                     <hr>
                                                     <style>
@@ -427,35 +427,35 @@
                 var txt2 = document.getElementById('<%= hiddenSelectedRating2.ClientID %>');
                 var txt3 = document.getElementById('<%= hiddenSelectedRating3.ClientID %>');
                 var txt4 = document.getElementById('<%= hiddenSelectedRating4.ClientID %>');
-                
-
+             
 
                 if (txt1.value == "") {
-                    displayErrorMessage("ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟");
+                    displayErrorMessage("ما مدى فعالية برامج التدريب في تعزيز مهاراتك ومعرفتك؟");
                     isValid = false;
                 }
 
 
 
                 if (txt2.value == "") {
-                    displayErrorMessage("ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟");
+                    displayErrorMessage("ما مدى سهولة الوصول إلى فرص التعلم والتطوير داخل الشركة؟");
                     isValid = false;
                 }
 
 
 
                 if (txt3.value == "") {
-                    displayErrorMessage("ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟");
+                    displayErrorMessage("ما مدى توافق برامج التعلم والتطوير مع أهداف نموك المهني؟");
                     isValid = false;
                 }
 
 
                 if (txt4.value == "") {
-                    displayErrorMessage("ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟");
+                    displayErrorMessage("ما مدى رضاك عن تنوع وملاءمة الدورات التدريبية المتاحة؟");
                     isValid = false;
                 }
 
-              
+
+               
 
                 if (!isValid) {
                     return false;

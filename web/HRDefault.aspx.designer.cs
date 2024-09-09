@@ -11,7 +11,7 @@ namespace web
 {
 
 
-    public partial class HRHumanCapitalOperations
+    public partial class HRDefault
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace web
         protected global::System.Web.UI.HtmlControls.HtmlForm frm;
 
         /// <summary>
-        /// Image2 control.
+        /// Image9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.Image Image9;
 
         /// <summary>
         /// pnlregister control.
@@ -60,22 +60,58 @@ namespace web
         protected global::System.Web.UI.WebControls.Panel pnlEmployment;
 
         /// <summary>
-        /// img1 control.
+        /// lblQUestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img1;
+        protected global::System.Web.UI.WebControls.Label lblQUestion;
 
         /// <summary>
-        /// Label10 control.
+        /// ddlDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDepartment;
+
+        /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
+
+        /// <summary>
+        /// ddlZone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlZone;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// selectedRating1 control.
@@ -96,22 +132,22 @@ namespace web
         protected global::System.Web.UI.WebControls.HiddenField hiddenSelectedRating1;
 
         /// <summary>
-        /// Image1 control.
+        /// Image2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image Image2;
 
         /// <summary>
-        /// Label1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// selectedRating2 control.
@@ -141,13 +177,13 @@ namespace web
         protected global::System.Web.UI.WebControls.Image Image3;
 
         /// <summary>
-        /// Label2 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// selectedRating3 control.
@@ -177,13 +213,13 @@ namespace web
         protected global::System.Web.UI.WebControls.Image Image4;
 
         /// <summary>
-        /// Label3 control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// selectedRating4 control.
@@ -204,13 +240,13 @@ namespace web
         protected global::System.Web.UI.WebControls.HiddenField hiddenSelectedRating4;
 
         /// <summary>
-        /// lnkSubmit control.
+        /// lnkSubmit2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkSubmit;
+        protected global::System.Web.UI.WebControls.LinkButton lnkSubmit2;
 
         /// <summary>
         /// pnlThankyou control.

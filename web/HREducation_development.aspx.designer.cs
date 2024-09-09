@@ -11,7 +11,7 @@ namespace web
 {
 
 
-    public partial class HRHumanCapitalOperations
+    public partial class HREducation_development
     {
 
         /// <summary>
@@ -204,13 +204,13 @@ namespace web
         protected global::System.Web.UI.WebControls.HiddenField hiddenSelectedRating4;
 
         /// <summary>
-        /// lnkSubmit control.
+        /// lnkSubmit2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkSubmit;
+        protected global::System.Web.UI.WebControls.LinkButton lnkSubmit2;
 
         /// <summary>
         /// pnlThankyou control.

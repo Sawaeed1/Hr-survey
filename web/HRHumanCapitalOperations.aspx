@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRHumanCapitalOperations.aspx.cs" EnableEventValidation="false" Inherits="web.HRHumanCapitalOperations" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRHumanCapitalOperations.aspx.cs" Inherits="web.HRHumanCapitalOperations1" %>
 <!DOCTYPE html>
 <html lang="en">
 

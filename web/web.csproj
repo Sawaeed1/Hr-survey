@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,7 +73,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
-      <HintPath>..\..\..\..\From old Desktop\Remove .aspx\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Remove .aspx\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -80,7 +81,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\..\..\..\From old Desktop\Remove .aspx\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Remove .aspx\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -92,7 +93,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Optimization">
-      <HintPath>..\..\..\..\From old Desktop\Remove .aspx\System.Web.Optimization.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Remove .aspx\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -105,6 +106,10 @@
   <ItemGroup>
     <Content Include="Education_development.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HRDefault.aspx" />
+    <Content Include="HREducation_development.aspx" />
+    <Content Include="HRHumanCapitalOperations.aspx" />
+    <Content Include="HRPerformance_management.aspx" />
     <Content Include="HumanCapitalOperations.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -204,6 +209,34 @@
     <Compile Include="Entity\ExceptionLogging.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HRDefault.aspx.cs">
+      <DependentUpon>HRDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRDefault.aspx.designer.cs">
+      <DependentUpon>HRDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HREducation_development.aspx.cs">
+      <DependentUpon>HREducation_development.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HREducation_development.aspx.designer.cs">
+      <DependentUpon>HREducation_development.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRHumanCapitalOperations.aspx.cs">
+      <DependentUpon>HRHumanCapitalOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRHumanCapitalOperations.aspx.designer.cs">
+      <DependentUpon>HRHumanCapitalOperations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HRPerformance_management.aspx.cs">
+      <DependentUpon>HRPerformance_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRPerformance_management.aspx.designer.cs">
+      <DependentUpon>HRPerformance_management.aspx</DependentUpon>
     </Compile>
     <Compile Include="HumanCapitalOperations.aspx.cs">
       <DependentUpon>HumanCapitalOperations.aspx</DependentUpon>

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRHumanCapitalOperations.aspx.cs" EnableEventValidation="false" Inherits="web.HRHumanCapitalOperations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRDefault.aspx.cs" EnableEventValidation="false" Inherits="web.HRDefault" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -127,7 +128,7 @@
                                         <%--style="margin-left: 10%"--%>
 
                                         <div class="form-group" style="text-align: center">
-                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Resources/img/Sawaeed-logo.png" Height="145" />
+                                            <asp:Image ID="Image9" runat="server" ImageUrl="~/Resources/img/Sawaeed-logo.png" Height="145" />
 
                                             <div style="height: 25px"></div>
                                         </div>
@@ -151,20 +152,61 @@
 
                                                 <asp:Panel ID="pnlEmployment" runat="server">
                                                     <div class="custom-alert custom-alert-success">
-                                                     عمليات رأس المال البشري 
+                                                        التوظيف
                                                     </div>
                                                     <div class="custom-alert custom-alert-warning" style="width: 35%; direction: rtl; text-align: right; float: right">
-                                                        جميع الموظفين 
+                                                        جميع الموظفين
                                                     </div>
                                                     <div style="height: 80px"></div>
                                                     <input type="hidden" id="latitude" name="latitude">
                                                     <input type="hidden" id="longitude" name="longitude">
+                                                    <div class="form-group" dir="rtl">
+
+                                                        <asp:Label ID="lblQUestion" ForeColor="Black" runat="server" Style="direction: rtl" Text="اختر القسم"></asp:Label>
+                                                        <b style="color: red">*</b><br />
+
+                                                        <div style="direction: rtl">
+
+
+                                                            <asp:DropDownList CssClass="form-control" Style="max-width: 70%" ID="ddlDepartment" runat="server">
+                                                                <asp:ListItem Selected="True" Value="0" Text="اختر القسم"></asp:ListItem>
+                                                                <asp:ListItem Value="1" Text="الإدارة العامة "></asp:ListItem>
+                                                                <asp:ListItem Value="2" Text="إدارة المالية "></asp:ListItem>
+                                                                <asp:ListItem Value="3" Text="إدارة رأس المال البشري "></asp:ListItem>
+                                                                <asp:ListItem Value="4" Text="إدارة خدمات مساندة "></asp:ListItem>
+                                                                <asp:ListItem Value="5" Text="إدارة التميز المؤسسي"></asp:ListItem>
+                                                                <asp:ListItem Value="6" Text="ادارة الحوكمة والمخاطر والامتثال "></asp:ListItem>
+                                                                <asp:ListItem Value="7" Text="إدارة حلول الاعمال "></asp:ListItem>
+                                                                <asp:ListItem Value="8" Text="إدارة تطوير الاعمال  "></asp:ListItem>
+                                                            </asp:DropDownList>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" dir="rtl">
+                                                        <asp:Label ID="Label9" ForeColor="Black" runat="server" Style="direction: rtl" Text="اختر منطقة"></asp:Label>
+                                                        <b style="color: red">*</b><br />
+
+                                                        <div style="direction: rtl">
+                                                            <asp:DropDownList CssClass="form-control" Style="max-width: 70%" ID="ddlZone" runat="server">
+                                                                <asp:ListItem Selected="True" Value="0" Text="اختر منطقة"></asp:ListItem>
+                                                                <asp:ListItem Value="1" Text="المنطقة 1"></asp:ListItem>
+                                                                <asp:ListItem Value="2" Text="المنطقة 2"></asp:ListItem>
+                                                                <asp:ListItem Value="3" Text="المنطقة 3"></asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </div>
+
+                                                    </div>
+                                
+                                                    <br />
+                                                  <%--  <div style="height: 80px"></div>--%>
 
 
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
-                                                            <asp:Image ID="img1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label10" Text="ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
+                                                            <asp:Label ID="Label1" Text="ما مدى فعالية عملية تهيئة الموظفين في مساعدتك على الاندماج في ثقافة الشركة؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -189,8 +231,8 @@
                                                     </div>
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
-                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label1" Text="ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
+                                                            <asp:Label ID="Label2" Text="ما مدى استعدادك لدورك ومسؤولياتك بفضل عملية تهيئة الموظفين ؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -208,14 +250,15 @@
                                                                 </div>
                                                                 <asp:HiddenField ID="hiddenSelectedRating2" runat="server" />
 
+
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="question">
+                                                      <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image3" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label2" Text="ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label3" Text="ما مدى رضاك عن الدعم والموارد المقدمة خلال فترة تهيئتك ؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -233,14 +276,16 @@
                                                                 </div>
                                                                 <asp:HiddenField ID="hiddenSelectedRating3" runat="server" />
 
+
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="question">
+
+                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image4" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label3" Text="ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label4" Text="ما مدى وضوح شرح سياسات وإجراءات الشركة خلال فترة تهيئتك؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -258,23 +303,18 @@
                                                                 </div>
                                                                 <asp:HiddenField ID="hiddenSelectedRating4" runat="server" />
 
+
                                                             </div>
                                                         </div>
 
                                                     </div>
-
-                                                  
-
-
-
-
 
                                                     <div id="errorList" class="error-message"></div>
 
 
                                                     <br />
                                                     <div class="rowzz">
-                                                        <asp:LinkButton ID="lnkSubmit" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit_Click"> تقديم</asp:LinkButton>
+                                                        <asp:LinkButton ID="lnkSubmit2" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit2_Click"> التالي</asp:LinkButton>
                                                     </div>
                                                     <hr>
                                                     <style>
@@ -427,36 +467,25 @@
                 var txt2 = document.getElementById('<%= hiddenSelectedRating2.ClientID %>');
                 var txt3 = document.getElementById('<%= hiddenSelectedRating3.ClientID %>');
                 var txt4 = document.getElementById('<%= hiddenSelectedRating4.ClientID %>');
-                
 
 
                 if (txt1.value == "") {
-                    displayErrorMessage("ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟");
+                    displayErrorMessage("ما مدى فعالية عملية تهيئة الموظفين في مساعدتك على الاندماج في ثقافة الشركة؟");
                     isValid = false;
                 }
-
-
-
                 if (txt2.value == "") {
-                    displayErrorMessage("ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟");
+                    displayErrorMessage("ما مدى استعدادك لدورك ومسؤولياتك بفضل عملية تهيئة الموظفين ؟");
                     isValid = false;
                 }
-
-
-
                 if (txt3.value == "") {
-                    displayErrorMessage("ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟");
+                    displayErrorMessage("ما مدى رضاك عن الدعم والموارد المقدمة خلال فترة تهيئتك ؟");
                     isValid = false;
                 }
-
-
                 if (txt4.value == "") {
-                    displayErrorMessage("ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟");
+                    displayErrorMessage("ما مدى وضوح شرح سياسات وإجراءات الشركة خلال فترة تهيئتك؟");
                     isValid = false;
                 }
-
-              
-
+               
                 if (!isValid) {
                     return false;
                 }
@@ -468,4 +497,3 @@
 </body>
 
 </html>
-

@@ -11,10 +11,11 @@ using web.Entity;
 
 namespace web
 {
-    public partial class HumanCapitalOperations : System.Web.UI.Page
+    public partial class HRPerformance_management : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!Page.IsPostBack)
             {
                 pnlregister.Visible = true;
@@ -26,9 +27,6 @@ namespace web
         {
             try
             {
-
-
-
 
                 int question1 = 0;
                 question1 = Convert.ToInt32(hiddenSelectedRating1.Value);
@@ -44,7 +42,8 @@ namespace web
                 question4 = Convert.ToInt32(hiddenSelectedRating4.Value);//Convert.ToInt32(Request.Form["rating_shared_files_and_copying"]);
 
 
-
+                int question5 = 0;
+                question5 = Convert.ToInt32(hiddenSelectedRating5.Value);//Convert.ToInt32(Request.Form["rating_shared_files_and_copying"]);
 
                 string ipAddress = string.Empty;
                 string latitude = string.Empty;
@@ -85,6 +84,7 @@ namespace web
                 dt.Rows.Add(2, question2);
                 dt.Rows.Add(3, question3);
                 dt.Rows.Add(4, question4);
+                dt.Rows.Add(5, question5);
 
 
 
@@ -107,7 +107,7 @@ namespace web
                         cmd.Parameters.AddWithValue("@ipAddress", ipAddress);
                         cmd.Parameters.AddWithValue("@Lat", latitude);
                         cmd.Parameters.AddWithValue("@Long", longitude);
-                        cmd.Parameters.AddWithValue("@SurveyType", 4);
+                        cmd.Parameters.AddWithValue("@SurveyType", 7);
                         cmd.Parameters.AddWithValue("@tAnswer", dt);
                         cmd.CommandType = CommandType.StoredProcedure;
                         int isRowEffected = cmd.ExecuteNonQuery();
@@ -118,9 +118,9 @@ namespace web
 
                         if (isSaved)
                         {
-                           // ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='Performance_management.aspx';</script>'");
-                            pnlregister.Visible = false;
-                            pnlThankyou.Visible = true;
+                            ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='HRHumanCapitalOperations.aspx';</script>'");
+                            //pnlregister.Visible = false;
+                            //pnlThankyou.Visible = true;
                         }
                     }
                 }

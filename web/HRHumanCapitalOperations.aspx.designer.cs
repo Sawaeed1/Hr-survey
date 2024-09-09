@@ -11,7 +11,7 @@ namespace web
 {
 
 
-    public partial class HRHumanCapitalOperations
+    public partial class HRHumanCapitalOperations1
     {
 
         /// <summary>

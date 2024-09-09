@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRHumanCapitalOperations.aspx.cs" EnableEventValidation="false" Inherits="web.HRHumanCapitalOperations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HRPerformance_management.aspx.cs" Inherits="web.HRPerformance_management" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -151,7 +152,7 @@
 
                                                 <asp:Panel ID="pnlEmployment" runat="server">
                                                     <div class="custom-alert custom-alert-success">
-                                                     عمليات رأس المال البشري 
+                                                        إدارة الاداء
                                                     </div>
                                                     <div class="custom-alert custom-alert-warning" style="width: 35%; direction: rtl; text-align: right; float: right">
                                                         جميع الموظفين 
@@ -164,7 +165,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="img1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label10" Text="ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label10" Text="ما مدى وضوح معايير تقييم الأداء؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -190,7 +191,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label1" Text="ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label1" Text="ما مدى عدالة معايير تقييم الأداء؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -215,7 +216,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image3" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label2" Text="ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label2" Text="ما مدى بناء وفائدة التغذية الراجعة التي تتلقاها من مديرك خلال مراجعات الأداء؟ " ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -240,7 +241,7 @@
                                                     <div class="question">
                                                         <div class="form-group" dir="rtl">
                                                             <asp:Image ID="Image4" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
-                                                            <asp:Label ID="Label3" Text="ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <asp:Label ID="Label3" Text="ما مدى دعم عمليات إدارة الأداء لتطويرك المهني؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
                                                             <b style="color: red">*</b><br />
 
                                                             <div style="direction: rtl">
@@ -263,7 +264,31 @@
 
                                                     </div>
 
-                                                  
+                                                    <div class="question">
+                                                        <div class="form-group" dir="rtl">
+                                                            <asp:Image ID="Image5" runat="server" ImageUrl="~/Resources/img/question.png" Width="30px" Height="28px" />
+                                                            <asp:Label ID="Label4" Text="ما مدى رضاك عن آليات تحديد الأهداف وتتبع الأداء؟" ForeColor="Black" runat="server" Style="direction: rtl"></asp:Label>
+                                                            <b style="color: red">*</b><br />
+
+                                                            <div style="direction: rtl">
+
+
+                                                                <div class="stars">
+                                                                    <span class="star" data-value="1">&#9733;</span>
+                                                                    <span class="star" data-value="2">&#9733;</span>
+                                                                    <span class="star" data-value="3">&#9733;</span>
+                                                                    <span class="star" data-value="4">&#9733;</span>
+                                                                    <span class="star" data-value="5">&#9733;</span>
+                                                                </div>
+                                                                <div style="display: none">
+                                                                    <asp:Label ID="selectedRating5" runat="server"></asp:Label>
+                                                                </div>
+                                                                <asp:HiddenField ID="hiddenSelectedRating5" runat="server" />
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
 
 
 
@@ -274,7 +299,7 @@
 
                                                     <br />
                                                     <div class="rowzz">
-                                                        <asp:LinkButton ID="lnkSubmit" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit_Click"> تقديم</asp:LinkButton>
+                                                        <asp:LinkButton ID="lnkSubmit" runat="server" ClientIDMode="Static" Style="width: 70%" CssClass="btn btn-primary btn-user btn-block" OnClientClick="return validate();" OnClick="lnkSubmit_Click"> التالي</asp:LinkButton>
                                                     </div>
                                                     <hr>
                                                     <style>
@@ -427,35 +452,39 @@
                 var txt2 = document.getElementById('<%= hiddenSelectedRating2.ClientID %>');
                 var txt3 = document.getElementById('<%= hiddenSelectedRating3.ClientID %>');
                 var txt4 = document.getElementById('<%= hiddenSelectedRating4.ClientID %>');
-                
+                var txt5 = document.getElementById('<%= hiddenSelectedRating5.ClientID %>');
 
 
                 if (txt1.value == "") {
-                    displayErrorMessage("ما مدى استجابة وفائدة فريق عمليات رأس المال البشري في معالجة مخاوفك واستفساراتك؟");
+                    displayErrorMessage("ما مدى وضوح معايير تقييم الأداء؟");
                     isValid = false;
                 }
 
 
 
                 if (txt2.value == "") {
-                    displayErrorMessage("ما مدى رضاك عن كفاءة العمليات الإدارية للرأس المال البشري (مثل الرواتب، إدارة المزايا والتعويضات، ترتيبات السفر)؟");
+                    displayErrorMessage("ما مدى عدالة معايير تقييم الأداء؟");
                     isValid = false;
                 }
 
 
 
                 if (txt3.value == "") {
-                    displayErrorMessage("ما مدى فعالية تواصل إدارة رأس المال البشري بشأن التغييرات في السياسات والتحديثات الهامة؟");
+                    displayErrorMessage("ما مدى بناء وفائدة التغذية الراجعة التي تتلقاها من مديرك خلال مراجعات الأداء؟");
                     isValid = false;
                 }
 
 
                 if (txt4.value == "") {
-                    displayErrorMessage("ما مدى سهولة الوصول واستخدام أدوات وأنظمة رأس المال البشري التي تستخدمها (مثل بوابة اودو لخدمات عمليات رأس المال البشري، خيارات الخدمة الذاتية) ؟");
+                    displayErrorMessage("ما مدى دعم عمليات إدارة الأداء لتطويرك المهني؟");
                     isValid = false;
                 }
 
-              
+                if (txt5.value == "") {
+                    displayErrorMessage("ما مدى رضاك عن آليات تحديد الأهداف وتتبع الأداء؟");
+                    isValid = false;
+                }
+
 
                 if (!isValid) {
                     return false;

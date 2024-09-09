@@ -11,7 +11,7 @@ using web.Entity;
 
 namespace web
 {
-    public partial class Performance_management : System.Web.UI.Page
+    public partial class Performance_management: System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

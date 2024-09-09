@@ -9,9 +9,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using web.Entity;
 
+
 namespace web
 {
-    public partial class HumanCapitalOperations : System.Web.UI.Page
+    public partial class HREducation_development : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +23,7 @@ namespace web
             }
 
         }
-        protected void lnkSubmit_Click(object sender, EventArgs e)
+        protected void lnkSubmit2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -75,23 +76,23 @@ namespace web
                 }
 
 
-                DataTable dt = new DataTable();
-                dt.Clear();
-                dt.Columns.Add("QuestionID", typeof(int));
-                dt.Columns.Add("Answer", typeof(string));
+                DataTable dt2 = new DataTable();
+                dt2.Clear();
+                dt2.Columns.Add("QuestionID", typeof(int));
+                dt2.Columns.Add("Answer", typeof(string));
 
 
-                dt.Rows.Add(1, question1);
-                dt.Rows.Add(2, question2);
-                dt.Rows.Add(3, question3);
-                dt.Rows.Add(4, question4);
+                dt2.Rows.Add(1, question1);
+                dt2.Rows.Add(2, question2);
+                dt2.Rows.Add(3, question3);
+                dt2.Rows.Add(4, question4);
 
 
 
-                dt.Columns.Add("ID", typeof(Int32));
+                dt2.Columns.Add("ID", typeof(Int32));
 
                 int id = 1;
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in dt2.Rows)
                 {
                     row["ID"] = Convert.ToString(id);
                     id++;
@@ -107,8 +108,8 @@ namespace web
                         cmd.Parameters.AddWithValue("@ipAddress", ipAddress);
                         cmd.Parameters.AddWithValue("@Lat", latitude);
                         cmd.Parameters.AddWithValue("@Long", longitude);
-                        cmd.Parameters.AddWithValue("@SurveyType", 4);
-                        cmd.Parameters.AddWithValue("@tAnswer", dt);
+                        cmd.Parameters.AddWithValue("@SurveyType", 6);
+                        cmd.Parameters.AddWithValue("@tAnswer", dt2);
                         cmd.CommandType = CommandType.StoredProcedure;
                         int isRowEffected = cmd.ExecuteNonQuery();
 
@@ -118,9 +119,9 @@ namespace web
 
                         if (isSaved)
                         {
-                           // ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='Performance_management.aspx';</script>'");
-                            pnlregister.Visible = false;
-                            pnlThankyou.Visible = true;
+                            ClientScript.RegisterStartupScript(this.GetType(), "Success", "<script type='text/javascript'>alert('تم إرسال البيانات بنجاح!');window.location='HRPerformance_management.aspx';</script>'");
+                            //pnlregister.Visible = false;
+                            //pnlThankyou.Visible = true;
                         }
                     }
                 }
