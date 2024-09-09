@@ -1,0 +1,48 @@
+-----------Exception Details on  14/11/2023 19:25:49-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 14/11/2023 19:25:49
+
+Error Line No : line 34
+
+Error Message: FormatException ::1
+
+Exception Type: System.FormatException
+
+Error Location : Input string was not in a correct format.
+
+ Error Page Url: http://localhost:64943/default.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
+-----------Exception Details on  14/11/2023 19:26:50-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 14/11/2023 19:26:50
+
+Error Line No : line 34
+
+Error Message: FormatException 127.0.0.1
+
+Exception Type: System.FormatException
+
+Error Location : Input string was not in a correct format.
+
+ Error Page Url: http://localhost:64943/default.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+

@@ -1,0 +1,24 @@
+-----------Exception Details on  08/09/2024 15:21:50-----------------
+-------------------------------------------------------------------------------------
+
+
+
+Log Written Date: 08/09/2024 15:21:50
+
+Error Line No : Args e)
+
+Error Message: SqlException ::1
+
+Exception Type: System.Data.SqlClient.SqlException
+
+Error Location : Could not find stored procedure 'IT_Survey_Insert_SurveyAnswers'.
+
+ Error Page Url: http://localhost:64943/default.aspx
+
+User Host IP: 
+
+
+--------------------------------*End*------------------------------------------
+
+
+
